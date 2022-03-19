@@ -1,0 +1,115 @@
+/* Card */
+
+.cards-price {
+    display: flex;
+}
+
+.card-price {
+    text-align: center;
+    width: 300px;
+    margin: 25px;
+    padding: 40px 20px;
+    background: linear-gradient(-45deg, #24ff72, #9a4eff);
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.493);
+    transition: all 0.5s ease;
+}
+
+.card-price-duo {
+    text-align: center;
+    width: 300px;
+    margin: 25px;
+    padding: 40px 20px;
+    background: linear-gradient(-45deg, #fc354c, #0abfbc);
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.493);
+    transition: all 0.5s ease;
+}
+
+.card-price:nth-child(2) {
+    background: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+.card-price:nth-child(2):hover {
+    background: linear-gradient(-45deg, #ffec61, #f321d7);
+    transform: scale(1.05);
+}
+.card-price:nth-child(3) {
+    background: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+.card-price:nth-child(3):hover {
+    background: linear-gradient(-45deg, #f403d1, #64b5f6);
+    transform: scale(1.05);
+}
+.card-price-duo:nth-child(2) {
+    background: linear-gradient(-45deg, #3d7eaa, #ffe47a);
+}
+.card-price-duo:nth-child(2):hover {
+    background: linear-gradient(-45deg, #3d7eaa, #ffe47a);
+    transform: scale(1.05);
+}
+.card-price-duo:nth-child(3) {
+    background: linear-gradient(-45deg, #FFE53B 0%, #FF2525 74%);
+}
+.card-price-duo:nth-child(3):hover {
+    background: linear-gradient(-45deg, #FFE53B 0%, #FF2525 74%);
+    transform: scale(1.05);
+}
+
+
+.title-price .fach {
+    border-radius: 50%;
+    color: white;
+    font-size: 60px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.title-price h2 {
+    color: white;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.price-card {
+    color: white;
+    font-size: 25px;
+}
+
+.option-price ul {
+    margin: 0px;
+    padding-inline-start: 0px;
+}
+
+.option-price ul li {
+    list-style: none;
+    color: white;
+}
+
+.btn-card-pre {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    color: black;
+    text-decoration: none;
+}
+
+.card-price:hover {
+    transform: scale(1.05);
+}
+
+.card-price-duo:hover {
+    transform: scale(1.05);
+}
+
+.price-card h4 {
+    font-size: 30px;
+    color: white;
+}
+
+/* Fin Card */

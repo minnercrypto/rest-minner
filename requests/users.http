@@ -1,0 +1,29 @@
+###
+GET http://localhost:3000/api/users
+
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "title": "Crear una Página Web",
+    "description": "Trabajar Tranquilamente",
+    "done": true
+}
+
+###
+GET http://localhost:3000/api/users/61fbf45c2b831b6a39755137
+
+###
+DELETE http://localhost:3000/api/users/61facec44946b9a3fdbc81f1
+
+###
+GET http://localhost:3000/api/users/done
+
+###
+PUT http://localhost:3000/api/users/61fbf45c2b831b6a39755137
+Content-Type: application/json
+
+{
+    "title":"Crear un sitio web en wix"
+}
