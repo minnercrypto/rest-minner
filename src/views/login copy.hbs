@@ -1,0 +1,174 @@
+<section class="section section-shaped section-lg">
+    <div class="shape shape-style-1" data-parallax="true" style="
+    background-image:url('/prin/img/pexels-tima-miroshnichenko-7567304.jpg')
+    ;position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;">
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+            {{#if success_msg }}
+              <div class="alert alert-s alert-dismissible fade show" role="alert">
+                            <span class="alert-icon"><i class="fas fa-exclamation-triangle"></i></span>
+                            <span class="alert-text"><strong> ¡Enhorabuena! -</strong> 
+                              {{ success_msg }}  
+                            </span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+            {{/if}}
+            {{#if error}}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span class="alert-icon"><i class="ni ni-support-16"></i></span>
+                <span class="alert-text"><strong>¡Oh no! -</strong> {{error}}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            {{/if}}
+            {{#each errors }}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span class="alert-icon"><i class="ni ni-support-16"></i></span>
+                <span class="alert-text"><strong>¡Oh no! -</strong> {{text}}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            {{/each}}
+            {{#if error_msg }}
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span class="alert-icon"><i class="ni ni-support-16"></i></span>
+                <span class="alert-text"><strong>¡Oh no! -</strong> {{error_msg}}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            {{/if}}
+          <div class="card bg-secondary shadow border-0">
+            <div class="card-header bg-white pb-5">
+              <div class="text-muted text-center mb-3"><small>Inicia sesión con</small></div>
+              <div class="btn-wrapper text-center">
+                <a href="#" class="btn btn-neutral btn-icon">
+                  <span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+                    <span class="btn-inner--text">Facebook</span>
+                </a>
+                <a href="#" class="btn btn-neutral btn-icon">
+                  <span class="btn-inner--icon"><img src="/prin/img/icons/common/google.svg"></span>
+                  <span class="btn-inner--text">Google</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center text-muted mb-4">
+                <small>O inicie sesión con credenciales</small>
+              </div>
+              <form action="/login" method="POST">
+                <div class="card-body">
+                  <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      </div>
+                      <input type="email" name="email" class="form-control" placeholder="Email...">
+                    </div>
+                  </div>
+                  <div class="form-group focused">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                      </div>
+                      <input type="password" name="password" placeholder="Contraseña..." class="form-control" />
+                    </div>
+                  </div>
+                  <div class="custom-control custom-control-alternative custom-checkbox">
+                    <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
+                    <label class="custom-control-label" for=" customCheckLogin"><span>Recordarme</span></label>
+                  </div>
+                <div class="card-footer text-center">
+                  <button class="btn btn-primary btn-round btn-lg btn-block" type="submit">Iniciar Ahora</button>
+              </form>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-6">
+              <a href="#" class="text-default" data-toggle="modal" data-target="#modalForgotPASS"><small>¿Se te olvidó tu contraseña?</small></a>
+            </div>
+            <div class="col-6 text-right">
+              <a href="/#signupModal" class="text-default"><small>Crear una nueva cuenta</small></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Modal -->
+  <div class="modal fade" id="modalForgotPASS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div id="alert-forgot"></div>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">¿Se te olvidó tu contraseña?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label for="mail">Coloca tu correo electrónico a continuación:</label> <br>
+          <div class="input-group input-group-alternative">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+            </div>
+            <input type="email" id="mail" name="mail" required class="form-control" placeholder="Email...">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" id="resetPassword">Recuperar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row row-grid align-items-center mb-5">
+        <div class="col-lg-6">
+          <h3 class="text-primary font-weight-light mb-2">¡Inicie sesión ahora mismo!</h3>
+          <h4 class="mb-0 font-weight-light">Vuelva por más experiencia.</h4>
+        </div>
+        <div class="col-lg-6 text-lg-center btn-wrapper">
+          <button target="_blank" href="https://twitter.com/theminnercrypto" rel="nofollow" class="btn btn-icon-only btn-twitter rounded-circle" data-toggle="tooltip" data-original-title="Follow us">
+            <span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+          </button>
+          <button target="_blank" href="https://www.facebook.com/minnercrypto21/" rel="nofollow" class="btn-icon-only rounded-circle btn btn-facebook" data-toggle="tooltip" data-original-title="Like us">
+            <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
+          </button>
+        </div>
+      </div>
+      <hr>
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-6">
+          <div class="copyright">
+            &copy; 2022 - <a href="/" target="_blank">Minner Crypto, Inc</a>.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <ul class="nav nav-footer justify-content-end">
+            <li class="nav-item">
+              <a href="/legal" class="nav-link">Aviso Legal</a>
+            </li>
+            <li class="nav-item">
+              <a href="/privacy" class="nav-link">Políticas de Privacidad</a>
+            </li>
+            <li class="nav-item">
+              <a href="/cookies" class="nav-link">Cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
