@@ -1,5 +1,5 @@
-import app from './app';
-import './database';
+import app from "./app";
+import "./utils/mongoose";
 
-app.listen(app.get('port'));
-console.log('Server on port', app.get('port'));
+app.listen(app.get("port"));
+console.log(`server on port ${app.get("port")}`);
